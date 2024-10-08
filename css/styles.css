@@ -506,11 +506,8 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-list-item:hover .footer-social-list-item-link {
-    background-color: #31d0aa;
-}
-
-.footer-social-list-item:focus .footer-social-list-item-link {
+.footer-social-list-item-link:hover,
+.footer-social-list-item-link:focus {
     background-color: #31d0aa;
 }
 
