@@ -44,7 +44,9 @@ button {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 /* Navigation */
@@ -83,6 +85,17 @@ button {
     gap: 40px;
 }
 
+.navigation-link::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
+
 .navigation-link {
     display: block;
     padding: 24px 0;
@@ -91,6 +104,11 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+
+    position: relative;
+    color: #404bbf;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
@@ -120,6 +138,8 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover,
@@ -159,12 +179,14 @@ button {
 
 .service-button {
     border: none;
-    background: #4d5ae5;
+    background-color: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
+
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 
@@ -175,7 +197,7 @@ button {
 
 .service-button:hover,
 .service-button:focus {
-    background: #404bbf;
+    background-color: #404bbf;
 }
 
 /* Second Section */
@@ -305,7 +327,7 @@ button {
     gap: 24px;
 }
 
-.team-icons-social-link-list {
+.team-icons-social-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -317,8 +339,8 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icons-social-link-list:hover,
-.team-icons-social-link-list:focus {
+.team-icons-social-link:hover,
+.team-icons-social-link:focus {
     background-color: #404bbf;
 }
 
@@ -378,6 +400,7 @@ button {
 .project-card {
     width: calc((100% - 48px) / 3);
     background-color: #fff;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card-overlay-container {
@@ -424,6 +447,11 @@ button {
 .container-footer {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
+}
+
+.footer-logo-container {
+    margin-right: 120px;
 }
 
 .logo-footer {
@@ -457,19 +485,38 @@ button {
     margin-top: 16px;
 }
 
-.footer-social-container {
-    margin-left: 120px;
-}
-
 .footer-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+    margin-bottom: 16px;
 }
 
 .footer-social-list-item {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-list-item:hover,
+.footer-social-list-item:focus {
+    background-color: #31d0aa;
+}
+
+.footer-social-list-item {
+    width: 40px;
+    height: 40px;
+}
+
+/* .footer-social-list-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -479,13 +526,13 @@ button {
     border-radius: 50%;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .footer-social-icon {
     fill: #f4f4fd;
 }
 
-.footer-social-list-item:hover,
+/* .footer-social-list-item:hover,
 .footer-social-list-item:focus {
     background-color: #31d0aa;
-}
+} */
